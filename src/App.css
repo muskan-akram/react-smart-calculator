@@ -1,38 +1,153 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body, html, .app {
+  height: 100%;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb, #b9fbc0, #a1c4fd);
+  background-size: 300% 300%;
+  animation: scenicShift 12s ease infinite;
+  transition: all 0.5s ease;
+}
+
+/* Animated gradient for dynamic effect */
+@keyframes scenicShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.app.dark {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: white;
+  border-radius: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.calculator {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  padding: 25px;
+  width: 360px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app.dark .calculator {
+  background: rgba(30, 41, 59, 0.9);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2563eb;
+  font-size: 22px;
+}
+
+.app.dark h1 {
+  color: #93c5fd;
+}
+
+.display {
+  background: #f1f5f9;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: right;
+  font-size: 22px;
+  min-height: 80px;
+  margin-bottom: 15px;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+  overflow-x: auto;        /* Enables horizontal scroll if text is long */
+  white-space: nowrap;     /* Keeps text in one line */
+  scrollbar-width: thin;   /* Optional: makes scrollbar smaller */
+  scrollbar-color: #2563eb #f1f5f9; /* Optional: custom scrollbar color */
+}
+
+.display::-webkit-scrollbar {
+  height: 6px;
+}
+
+.display::-webkit-scrollbar-thumb {
+  background-color: #2563eb;
+  border-radius: 3px;
+}
+
+.app.dark .display {
+  background: #334155;
+  box-shadow: inset 0 2px 5px rgba(255,255,255,0.1);
+}
+
+.input {
+  opacity: 0.8;
+  font-size: 18px;
+}
+
+.result {
+  font-weight: bold;
+  font-size: 24px;
+  color: #2563eb;
+}
+
+.app.dark .result {
+  color: #60a5fa;
+}
+
+.buttons, .extra-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 14px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #e0f2fe, #bae6fd);
+  color: #1e3a8a;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+button:hover {
+  background: linear-gradient(145deg, #93c5fd, #60a5fa);
+  color: white;
+  transform: scale(1.05);
+}
+
+.app.dark button {
+  background: linear-gradient(145deg, #475569, #1e293b);
+  color: #f1f5f9;
+}
+
+.app.dark button:hover {
+  background: linear-gradient(145deg, #2563eb, #1e3a8a);
+  transform: scale(1.05);
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+.extra-buttons {
+  margin-top: 12px;
+}
+
+.footer {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #334155;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.app.dark .footer {
+  color: #cbd5e1;
 }
