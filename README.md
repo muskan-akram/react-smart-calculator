@@ -48,3 +48,7 @@ npm start
 5. **Open in browser**
 The app runs locally at:
 http://localhost:3000
+
+##  Live Demo
+[View the Calculator](https://muskan-akram.github.io/react-smart-calculator)
+
