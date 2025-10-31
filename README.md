@@ -35,15 +35,15 @@ Follow these steps to run the project locally:
    ```bash
    git clone https://github.com/muskan-akram/react-smart-calculator.git
 
-# 2. Navigate to the project directory
+2. **Navigate to the project directory**
 cd react-smart-calculator
 
-# 3. Install dependencies
+3. **Install dependencies**
 npm install
 
-# 4. Run the app
+4. **Run the app**
 npm start
 
-# 5. Open in browser
-# The app runs locally at:
+5. **Open in browser**
+The app runs locally at:
 http://localhost:3000
