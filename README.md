@@ -19,11 +19,12 @@ Created by **Muskan Akram** as part of her React portfolio collection.
 
 ##  Preview
 
-| Light Mode | Dark Mode |
-|-------------|-----------|
-| ![Light Mode](./screenshots/light.png) | ![Dark Mode](./screenshots/dark.png) |
+ **Light Mode** 
+ ![Light Mode](./screenshots/light.png) 
+ 
+ **Dark Mode**
+ ![Dark Mode](./screenshots/dark.png) |
 
-*(You can add screenshots later by capturing your app and saving them inside a `/screenshots` folder.)*
 
 ---
 
