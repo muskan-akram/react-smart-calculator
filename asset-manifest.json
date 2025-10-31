@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-smart-calculator/static/css/main.ab5e48c6.css",
+    "main.js": "/react-smart-calculator/static/js/main.69fec722.js",
+    "index.html": "/react-smart-calculator/index.html",
+    "main.ab5e48c6.css.map": "/react-smart-calculator/static/css/main.ab5e48c6.css.map",
+    "main.69fec722.js.map": "/react-smart-calculator/static/js/main.69fec722.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ab5e48c6.css",
+    "static/js/main.69fec722.js"
+  ]
+}
